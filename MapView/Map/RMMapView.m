@@ -2035,6 +2035,14 @@
     }
 }
 
+-(void)calloutViewClicked:(SMCalloutView *)calloutView
+{
+    if(_delegateHasTapOnLabelForAnnotation)
+    {
+        [self.delegate tapOnLabelForAnnotation:_currentAnnotation onMap:self];
+    }
+}
+
 - (void)tapOnLabelForAnnotation:(RMAnnotation *)anAnnotation atPoint:(CGPoint)aPoint
 {
     if (_delegateHasTapOnLabelForAnnotation && anAnnotation)
