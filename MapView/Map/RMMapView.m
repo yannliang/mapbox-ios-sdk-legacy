@@ -2035,8 +2035,7 @@
     }
 }
 
--(void)calloutViewClicked:(SMCalloutView *)calloutView
-{
+- (void)calloutViewClicked:(SMCalloutView *)calloutView {
     if(_delegateHasTapOnLabelForAnnotation)
     {
         [self.delegate tapOnLabelForAnnotation:_currentAnnotation onMap:self];
